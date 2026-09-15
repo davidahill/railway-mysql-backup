@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- MySQL Bucket Backup: database cylinder streaming into a bucket. Transparent background. -->
+  <!-- database body -->
+  <rect x="64" y="112" width="224" height="120" fill="#4F7DF3"/>
+  <ellipse cx="176" cy="232" rx="112" ry="40" fill="#4F7DF3"/>
+  <!-- band -->
+  <path d="M64 172a112 40 0 0 0 224 0" fill="none" stroke="#2F5BD9" stroke-width="10"/>
+  <!-- database top -->
+  <ellipse cx="176" cy="112" rx="112" ry="40" fill="#8FB0FF"/>
+  <!-- stream arrow -->
+  <path d="M176 292 V336 C176 372 196 384 232 384 H292" fill="none" stroke="#A3ADBB" stroke-width="22" stroke-linecap="round"/>
+  <path d="M284 350 L336 384 L284 418 Z" fill="#A3ADBB"/>
+  <!-- bucket -->
+  <path d="M300 300 H460 L442 458 Q440 476 420 476 H340 Q320 476 318 458 Z" fill="#F5A524"/>
+  <path d="M322 336 H438 L428 424 H332 Z" fill="#E08E0B" opacity="0.35"/>
+  <ellipse cx="380" cy="300" rx="80" ry="22" fill="#FFC64D"/>
+</svg>

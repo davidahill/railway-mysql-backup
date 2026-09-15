@@ -1,23 +1,27 @@
 {
-  "name": "mysql-s3-backup",
-  "version": "0.0.3",
-  "description": "Automated backups of MySQL database to S3 bucket",
+  "name": "railway-mysql-backup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scheduled backups of a Railway MySQL service into a Railway bucket",
   "main": "dist/index.js",
-  "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc"
-  },
-  "author": "Kirils Scerba",
   "license": "MIT",
-  "devDependencies": {
-    "@types/cron": "^2.0.0",
-    "@types/node": "^16.9.1",
-    "typescript": "^4.4.2"
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:iac": "tsc -p .railway/tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.162.0",
-    "cron": "^2.1.0",
+    "@aws-sdk/client-s3": "^3.1132.0",
+    "@aws-sdk/lib-storage": "^3.1132.0",
     "envsafe": "^2.0.3"
   },
-  "keywords": []
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "railway": "^3.11.0",
+    "typescript": "^5.9.0"
+  }
 }

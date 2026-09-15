@@ -1,6 +1,5 @@
-dist
-node_modules
+node_modules/
+dist/
 .env
-
-# Webstorm
-.idea
+.env.*
+*.log
