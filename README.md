@@ -74,6 +74,13 @@ sleeping database wake), `DEBUG`.
 Replace `MySQL` and `Bucket` with your services' names. The cron schedule lives on the
 service (default `0 5 * * *`, UTC); the container runs once and exits.
 
+#### Prebuilt image
+
+Every push to `master` publishes the Dockerfile to GitHub Container Registry as
+`ghcr.io/davidahill/railway-mysql-backup` with tags `<version>`, `<major>.<minor>`, `<major>`,
+`latest`, and `sha-<commit>`. Point a Railway service at the image instead of the repo when you
+want to skip the build step or keep Railway off your GitHub account entirely.
+
 #### Deploy with Infrastructure as Code
 
 [`.railway/railway.ts`](.railway/railway.ts) is a self-contained example: a database, a bucket,

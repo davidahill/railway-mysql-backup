@@ -29,6 +29,10 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*; \
     mysqldump --version
 
+LABEL org.opencontainers.image.source="https://github.com/davidahill/railway-mysql-backup" \
+      org.opencontainers.image.description="Scheduled, verified backups of a Railway MySQL service into a Railway bucket" \
+      org.opencontainers.image.licenses="MIT"
+
 WORKDIR /app
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
