@@ -1,5 +1,7 @@
 # Builds the Dockerfile and publishes it to GitHub Container Registry on every
-# push to master. Tags: <version>, <major>.<minor>, <major>, latest, sha-<short>.
+# push to master as ghcr.io/davidahill/railway-db-backup (the name avoids "mysql",
+# which Railway IaC would otherwise treat as a database image).
+# Tags: <version>, <major>.<minor>, <major>, latest, sha-<short>.
 # The version comes from package.json; bump it to publish a new release.
 name: Publish image
 
@@ -42,7 +44,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: ghcr.io/davidahill/railway-db-backup
           tags: |
             type=raw,value=${{ steps.version.outputs.full }}
             type=raw,value=${{ steps.version.outputs.minor }}
